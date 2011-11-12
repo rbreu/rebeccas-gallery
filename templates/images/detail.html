@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ image.title }}
+{% endblock %}
+
+{% block primary %}
+<div class="image">
+  <img class="detail" src="{{ image.image_url }}" alt="The Image '{{ image.title }}'" />
+</div>
+
+<p class="bordered">{{ image.description }}</p>
+
+<div class="meta bordered">
+  <dl class="meta">
+    <dt>Published:</dt><dd>{{ image.publication_date}}</dd>
+    <dt>Tags:</dt><dd>{% include "images/tag_list.html" with tag_list=image.tags.all %}</dd>
+  </dl>
+</div>
+
+{% endblock %}

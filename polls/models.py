@@ -1,0 +1,23 @@
+from django.db import models
+import datetime
+
+class Poll(models.Model):
+    question = models.CharField(max_length=200)
+    published_at = models.DateTimeField('publication date')
+    
+    def __unicode__(self):
+        return self.question
+
+    def was_published_today(self):
+        return self.published_at.date() == datetime.date.today()
+    
+    was_published_today.short_description = 'Published today?'
+    
+
+class Choice(models.Model):
+    poll = models.ForeignKey(Poll)
+    choice = models.CharField(max_length=200)
+    votes = models.IntegerField()
+
+    def __unicode__(self):
+        return self.choice

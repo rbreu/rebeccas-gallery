@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <link rel="stylesheet" href="http://localhost:8000/static/site.css" type="text/css" media="screen" />
+  <head>
+    <title>Rebecca's Art</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  </head>
+  
+  <body>
+    <div id="header">Rebecca's Art</div>
+
+    <div id="navigation">
+      <ul>
+	<li><a href="/">Home</a></li>
+	<li><a href="/images/tags/">Art by Tag</a></li>
+	<li><a href="/images/">Art by Date</a></li>
+	<li><a href="/">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div id="main">
+      <h1>{% block title %}{% endblock %}</h1>
+      {% block primary %}{% endblock %}
+    </div>
+  
+    <div id="footer">
+      Powered by Django • Works total: TODO • Last image uploaded: TODO
+    </div>
+
+  </body>
+</html>

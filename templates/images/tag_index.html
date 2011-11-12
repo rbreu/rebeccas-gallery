@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}
+Art by Tag
+{% endblock %}
+
+{% block primary %}
+<ol class="tag_index bordered">
+{% for tag in tag_list %}
+  <li><a href="{% url tag_detail tag.id %}">{{ tag.label }}</a> ({{ tag.image_set.count }})</li>
+{% endfor %}
+</ol>
+{% endblock %}

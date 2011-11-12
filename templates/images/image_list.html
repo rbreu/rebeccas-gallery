@@ -1,0 +1,18 @@
+<ol class="image_index">
+{% for image in image_list %}
+{% url image_detail image.id as img_url %}
+  <li>
+    <a href="{{ img_url }}">
+      <img class="thumb" src="{{ image.thumb_url }}" alt="Thumbnail of image {{ image.title}}" />
+    </a>
+    <div class="meta">
+      <a class="title" href="{{ img_url }}">{{ image.title }}</a>
+      <dl class="meta">
+	<dt>Published:</dt><dd>{{ image.publication_date}}</dd>
+	<dt>Tags:</dt><dd>{% include "images/tag_list.html" with tag_list=image.tags.all %}</dd>
+      </dl>
+    </div>
+  </li>
+{% endfor %}
+</ol>
+

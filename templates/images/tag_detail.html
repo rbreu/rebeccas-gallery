@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}
+Art Tagged {{ tag.label }}
+{% endblock %}
+
+{% block primary %}
+{% include "images/image_list.html" with image_list=tag.image_set.all %}
+{% endblock %}
