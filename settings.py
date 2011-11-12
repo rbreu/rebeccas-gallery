@@ -1,4 +1,4 @@
-# Django settings for gallery project.
+# Django settings for rebeccas-gallery project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -105,7 +105,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'gallery.urls'
+ROOT_URLCONF = 'rebeccas-gallery.urls'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
