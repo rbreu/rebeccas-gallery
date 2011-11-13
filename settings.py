@@ -125,6 +125,7 @@ INSTALLED_APPS = (
     'grappelli',
     'filebrowser',
     'django_nose',
+    'lettuce.django',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
@@ -153,6 +154,8 @@ LOGGING = {
 }
 
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+LETTUCE_SERVER_PORT = 7000
 
 # Filebrowser plugin configuration
 FILEBROWSER_DIRECTORY = ''
