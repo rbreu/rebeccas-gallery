@@ -124,6 +124,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'grappelli',
     'filebrowser',
+    'django_nose',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
@@ -151,7 +152,9 @@ LOGGING = {
     }
 }
 
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
+# Filebrowser plugin configuration
 FILEBROWSER_DIRECTORY = ''
 
 FILEBROWSER_VERSIONS = {
